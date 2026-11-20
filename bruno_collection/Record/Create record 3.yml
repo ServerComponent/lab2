@@ -1,0 +1,23 @@
+info:
+  name: Create record 3
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseUrl}}/record"
+  body:
+    type: json
+    data: |-
+      {
+        "user_id": 1,
+        "category_id": 3,
+        "amount": 50
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,19 @@
+info:
+  name: Record bad filter
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{baseUrl}}/record?user_id=abc"
+  params:
+    - name: user_id
+      value: abc
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

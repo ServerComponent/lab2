@@ -1,0 +1,18 @@
+info:
+  name: Create user empty name
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{baseUrl}}/user"
+  body:
+    type: json
+    data: '{"name": ""}'
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

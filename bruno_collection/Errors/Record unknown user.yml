@@ -1,0 +1,23 @@
+info:
+  name: Record unknown user
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{baseUrl}}/record"
+  body:
+    type: json
+    data: |-
+      {
+        "user_id": 999,
+        "category_id": 1,
+        "amount": 10
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
